@@ -1,0 +1,15 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.form-div {
+    width: 20%;
+    margin-top: 2%;
+    margin-left: 4%;
+}
+
+#unos-button {
+    margin-top: 1%;
+    width: 50%;
+}
