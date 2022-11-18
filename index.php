@@ -34,12 +34,37 @@
 
             <div class="mb-2">
                 <span>Drzava 1</span>
-                <select class="form-select" id="drzava_1"></select>
+                <select class="form-select" id="drzava_1">
+                    <?php
+                    include 'klase/drzava.php';
+
+                    $drzava = new Drzava();
+                    $drzave = $drzava->vratiDrzave();
+
+                    foreach ($drzave as $drz) {
+                    ?>
+                        <option value="<?php echo $drz->id ?>"><?php echo $drz->naziv ?></option>
+                    <?php
+                    }
+                    ?>
+                </select>
             </div>
 
             <div class="mb-2">
                 <span>Drzava 2</span>
-                <select class="form-select" id="drzava_2"></select>
+                <select class="form-select" id="drzava_2">
+                    <?php
+
+                    $drzava2 = new Drzava();
+                    $drzave2 = $drzava2->vratiDrzave();
+
+                    foreach ($drzave2 as $drz2) {
+                    ?>
+                        <option value="<?php echo $drz2->id ?>"><?php echo $drz2->naziv ?></option>
+                    <?php
+                    }
+                    ?>
+                </select>
             </div>
 
             <button class="btn btn-primary" id="unos-button">Unesi</button>
