@@ -73,7 +73,39 @@
 
 
         <div class="table-div">
+            <table id="table-rez" class="table table-bordered table-striped table-hover" >
+                <thead>
+                    <tr>
+                        <th>Datum</th>
+                        <th>Vreme</th>
+                        <th>Stadion</th>
+                        <th>Drzava 1</th>
+                        <th>Drzava 2</th>
+                        <th>Rezultat</th>
+                    </tr>
+                </thead>
 
+                <tbody>
+                    <?php
+
+                    include 'klase/rezultat.php';
+
+                    $rezultat = new Rezultat();
+                    $rezultati = $rezultat->vratiRezultate();
+
+                    foreach ($rezultati as $rez) {
+                    ?>
+                        <tr>
+                            <td><?php echo $rez->datum;  ?></td>
+                            <td><?php echo $rez->vreme;  ?></td>
+                            <td><?php echo $rez->stadion;  ?></td>
+                            <td><?php echo $rez->drzava_1;  ?></td>
+                            <td><?php echo $rez->drzava_2;  ?></td>
+                            <td><?php echo $rez->rezultat;  ?></td>
+                        </tr>
+                    <?php } ?>
+                </tbody>
+            </table>
         </div>
 
 
