@@ -20,7 +20,9 @@ $('#unos-button').click(function () {
 });
 
 
-$('#del-button').click(function () {
+
+
+$('.delete').click(function () {
 
     $.ajax(
         {
@@ -35,7 +37,6 @@ $('#del-button').click(function () {
             }
         });
 });
-
 
 
 
