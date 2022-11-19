@@ -18,3 +18,29 @@ $('#unos-button').click(function () {
             }
         });
 });
+
+
+$('#del-button').click(function () {
+
+    $.ajax(
+        {
+            url: 'ajax-url/delete.php',
+            method: 'GET',
+            data: {
+                rezultat_id: $(this).val()
+            },
+
+            success: function () {
+                location.reload()
+            }
+        });
+});
+
+
+
+
+
+
+
+
+

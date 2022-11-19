@@ -36,4 +36,15 @@ class Rezultat
 
         return $konekcija->query($db_upit);
     }
+
+
+
+    function obrisiRezultat($rezultat_id)
+    {
+        $konekcija = new mysqli("localhost", "root", "", "katar");
+
+        $db_upit = "DELETE FROM rezultat WHERE id=" . $rezultat_id;
+
+        return $konekcija->query($db_upit);
+    }
 }

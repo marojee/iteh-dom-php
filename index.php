@@ -87,6 +87,7 @@
                         <th>Drzava 1</th>
                         <th>Drzava 2</th>
                         <th>Rezultat</th>
+                        <th class="text-center">X</th>
                     </tr>
                 </thead>
 
@@ -107,6 +108,7 @@
                             <td><?php echo $rez->drzava_1;  ?></td>
                             <td><?php echo $rez->drzava_2;  ?></td>
                             <td><?php echo $rez->rezultat;  ?></td>
+                            <td class="text-center"><button class="btn btn-dark" id="del-button" value="<?php echo $rez->id; ?>">X</button></td>
                         </tr>
                     <?php } ?>
                 </tbody>
