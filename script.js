@@ -1,3 +1,9 @@
+$(function () {
+    $('#table-rez').DataTable();
+    $('#table-rez_filter').remove();
+});
+
+
 $('#unos-button').click(function () {
 
     $.ajax(
@@ -39,6 +45,22 @@ $('.delete').click(function () {
 });
 
 
+
+$('#naziv-stadiona').keyup(function () {
+
+    $.ajax(
+        {
+            url: 'ajax-url/search.php',
+            method: 'GET',
+            data: {
+                naziv_stadiona: $('#naziv-stadiona').val()
+            },
+
+            success: function (data) {
+                $('tbody').html(data)
+            }
+        });
+});
 
 
 

@@ -47,4 +47,21 @@ class Rezultat
 
         return $konekcija->query($db_upit);
     }
+
+
+
+    function nadjiRezultateNaStadionu($naziv_stadiona)
+    {
+        $konekcija = new mysqli("localhost", "root", "", "katar");
+
+        $db_upit = "SELECT * FROM rezultat WHERE stadion LIKE '%" . $naziv_stadiona . "%'";
+        $result_set = $konekcija->query($db_upit);
+        $rezultati = array();
+
+        while ($rezultat = $result_set->fetch_object()) {
+            array_push($rezultati, $rezultat);
+        }
+
+        return $rezultati;
+    }
 }
