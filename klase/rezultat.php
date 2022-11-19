@@ -25,4 +25,15 @@ class Rezultat
 
         return $rezultati;
     }
+
+
+    function unesiRezultat($datum, $vreme, $stadion, $drzava_1, $drzava_2, $rezultat)
+    {
+        $konekcija = new mysqli("localhost", "root", "", "katar");
+
+        $db_upit = "INSERT INTO rezultat (datum, vreme, stadion, drzava_1, drzava_2, rezultat) 
+        VALUES ('$datum', '$vreme', '$stadion', '$drzava_1', '$drzava_2', '$rezultat')";
+
+        return $konekcija->query($db_upit);
+    }
 }

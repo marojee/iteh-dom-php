@@ -67,13 +67,18 @@
                 </select>
             </div>
 
+            <div class="mb-2">
+                <span>Rezultat</span>
+                <input type="text" class="form-control" id="rezultat">
+            </div>
+
             <button class="btn btn-primary" id="unos-button">Unesi</button>
 
         </div>
 
 
         <div class="table-div">
-            <table id="table-rez" class="table table-bordered table-striped table-hover" >
+            <table id="table-rez" class="table table-bordered table-striped table-hover">
                 <thead>
                     <tr>
                         <th>Datum</th>
@@ -111,7 +116,8 @@
 
     </div>
 
-
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
